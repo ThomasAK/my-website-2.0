@@ -17,8 +17,7 @@ contentRouter.get("/", async (_req, res) => {
 contentRouter.get("/:name", async (req, res) => {
     try {
         const name = req?.params?.name;
-        const query = { _name: new mongodb.ObjectId(name) };
-        const content = await collections.content.findOne(query);
+        const content = await collections.content.findOne({ name: name });
 
         if (content) {
             res.status(200).send(content);

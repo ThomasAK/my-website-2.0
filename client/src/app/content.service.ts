@@ -24,7 +24,7 @@ export class ContentService {
     return this.content$;
   }
 
-  getContent(id: string): Observable<Content> {
-    return this.httpClient.get<Content>(`${this.url}/content/${id}`);
+  getContent(name: string): Observable<Content> {
+    return this.httpClient.get<Content>(`${this.url}/content/${name}`);
   }
 }

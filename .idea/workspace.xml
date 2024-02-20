@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f353f9be-316d-4add-bd83-7c80b3598ef0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/app/content.ts" afterDir="false" />
+    <list default="true" id="f353f9be-316d-4add-bd83-7c80b3598ef0" name="Changes" comment="Remove dead code. and add new code for the main page of my website.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.angular/cache/17.2.0/client/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/client/.angular/cache/17.2.0/client/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/add-employee/add-employee.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/edit-employee/edit-employee.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/employee-form/employee-form.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/employee.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/content.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/employees-list/employees-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/employees-list/employees-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/content.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/content.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/main/main.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main/main.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/content.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/content.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/content.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +36,15 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2cYuor9L6DZZdyrEsDqtfkOrCWP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -80,8 +80,16 @@
       <workItem from="1708301014662" duration="17000" />
       <workItem from="1708301047104" duration="9231000" />
       <workItem from="1708387230575" duration="908000" />
-      <workItem from="1708388170189" duration="760000" />
+      <workItem from="1708388170189" duration="6607000" />
     </task>
+    <task id="LOCAL-00001" summary="Remove dead code. and add new code for the main page of my website.">
+      <created>1708389656277</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708389656277</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +107,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Remove dead code. and add new code for the main page of my website." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove dead code. and add new code for the main page of my website." />
   </component>
 </project>

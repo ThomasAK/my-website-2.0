@@ -32,7 +32,6 @@ async function applySchemaValidationContent(db: mongodb.Db) {
                     items: {
                         bsonType: ["object"],
                         required: ["subHeader", "text"],
-                        additionalProperties: false,
                         description: "'contentBlocks' must contain the stated fields",
                         properties: {
                             subHeader: {
@@ -43,13 +42,19 @@ async function applySchemaValidationContent(db: mongodb.Db) {
                                 bsonType: "string",
                                 description: "'text' is required and a string",
                             },
-                            link: {
-                                bsonType: ["array"],
-                                description: "'links' is optional field of type string"
-                            },
                             image: {
-                                bsonType: "string",
-                                description: "'image' is optional field of type string"
+                                bsonType: "object",
+                                description: "'image' is optional field of type object",
+                                properties:{
+                                    href: {
+                                        bsonType: "string",
+                                        description: "'href' is optional and a string"
+                                    },
+                                    path: {
+                                      bsonType: "string",
+                                      description: "'path' is optional and a string"
+                                    }
+                                }
                             }
                         }
                     }
