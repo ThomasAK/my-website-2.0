@@ -1,1 +1,122 @@
-/* You can add global styles to this file, and also import other style files */
+@import"https://bootswatch.com/4/cyborg/bootstrap.css";
+
+body {
+    background-color: rgb(77, 77, 77);
+    background-image: url("https://image.ibb.co/eVgCDv/Boarding4.jpg");
+    background-size: 100%;
+
+}
+
+html {
+    font-size : 100%;
+}
+
+nav{
+    z-index: 1;
+}
+
+.navbar {
+    position: fixed;
+}
+
+p {
+    text-align: center;
+    border-radius: .5em;
+    padding: .5em;
+}
+
+.sub-header {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: .5em;
+    padding-top: .5em;
+}
+
+.Portfolio.content_width {
+    width: 47%;
+    margin-left: 1em;
+    margin-right: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content_width {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.Resume.section{
+    background: none;
+}
+
+.contactMe{
+    background: hsla(0,0%,0%,10);
+    border-radius: .3em .3em .3em .3em;
+    margin-top: 1%;
+    color: 	#111;
+}
+
+.section{
+    border-radius: .3em .3em .3em .3em;
+    background: hsla(0,0%,20%,.8);
+    color: 	#111;
+    margin-top: 8%;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.img-responsive {
+    width: auto;
+    height: 200px;
+}
+
+.img-width {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.center {
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    padding: 12px;
+}
+
+@media screen and (max-width: 990px) {
+    .header {
+        font-size: 2em;
+        height: 85px;
+        padding: 0px;
+    }
+    .section {
+        margin-top: 20%;
+    }
+
+    a {
+        text-align: center;
+    }
+    .content_width {
+        width: auto;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+}

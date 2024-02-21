@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f353f9be-316d-4add-bd83-7c80b3598ef0" name="Changes" comment="Remove dead code. and add new code for the main page of my website.">
+    <list default="true" id="f353f9be-316d-4add-bd83-7c80b3598ef0" name="Changes" comment="updated Content interface and db schema for content to better match the content displayed for the webpage.">
+      <change afterPath="$PROJECT_DIR$/client/src/app/resume/resume.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/files/Thomas_Kempton_Resume.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/images/Merge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/images/Redfu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/images/SnowboarindAngel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/images/Steak.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/images/breakFastBurrito.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/images/pbros.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/images/recipes.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/content.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/content.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.angular/cache/17.2.0/client/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/client/.angular/cache/17.2.0/client/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.angular/cache/17.2.0/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.angular/cache/17.2.0/vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/main/main.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main/main.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/content.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/content.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +64,21 @@
     <property name="go.format.on.save.advertiser.fired" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Banana\Documents\GitHub\website-2.0\server\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\assets\files" />
+      <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\assets" />
+      <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\app" />
+      <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src" />
+      <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
@@ -80,7 +106,7 @@
       <workItem from="1708301014662" duration="17000" />
       <workItem from="1708301047104" duration="9231000" />
       <workItem from="1708387230575" duration="908000" />
-      <workItem from="1708388170189" duration="6607000" />
+      <workItem from="1708388170189" duration="28626000" />
     </task>
     <task id="LOCAL-00001" summary="Remove dead code. and add new code for the main page of my website.">
       <created>1708389656277</created>
@@ -89,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708389656277</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated Content interface and db schema for content to better match the content displayed for the webpage.">
+      <created>1708416238495</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708416238495</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +142,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Remove dead code. and add new code for the main page of my website." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove dead code. and add new code for the main page of my website." />
+    <MESSAGE value="updated Content interface and db schema for content to better match the content displayed for the webpage." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Content interface and db schema for content to better match the content displayed for the webpage." />
   </component>
 </project>
