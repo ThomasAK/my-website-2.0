@@ -1,0 +1,32 @@
+version: '3.0' # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  frontend:
+    build:
+      context: "./client"
+    ports:
+      - 4200:80
+    networks:
+      - website_net
+  backend:
+    build:
+      context: "./server"
+    ports:
+      - 5200:5200
+    networks:
+      - website_net
+  proxy:
+    image: nginx
+    environment:
+      - NGINX_ENVSUBST_TEMPLATE_SUFFIX=.conf
+      - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+    volumes:
+      - ${PWD}/nginx.conf:/etc/nginx/templates/nginx.conf.conf
+    ports:
+      - "80:80"
+    networks:
+      - website_net
+
+networks:
+  website_net:

@@ -7,13 +7,12 @@ import { Content } from './content';
   providedIn: 'root'
 })
 export class ContentService {
-  private url = 'http://localhost:5200';
   private content$: Subject<Content[]> = new Subject();
 
   constructor(private httpClient: HttpClient) { }
 
   private refreshContent() {
-    this.httpClient.get<Content[]>(`${this.url}/content`)
+    this.httpClient.get<Content[]>(`/api/content`)
         .subscribe(content => {
           this.content$.next(content);
         });
@@ -25,6 +24,6 @@ export class ContentService {
   }
 
   getContent(name: string): Observable<Content> {
-    return this.httpClient.get<Content>(`${this.url}/content/${name}`);
+    return this.httpClient.get<Content>(`/api/content/${name}`);
   }
 }

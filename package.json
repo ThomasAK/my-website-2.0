@@ -1,0 +1,11 @@
+{
+  "name": "website-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "reset":"docker compose down -v && docker compose build && docker compose up -d",
+    "resetui": "docker compose up --build --force-recreate -d frontend "
+  },
+  "author": ""
+}

@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f353f9be-316d-4add-bd83-7c80b3598ef0" name="Changes" comment="updated Content interface and db schema for content to better match the content displayed for the webpage.">
-      <change afterPath="$PROJECT_DIR$/client/src/app/resume/resume.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/files/Thomas_Kempton_Resume.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/images/Merge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/images/Redfu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/images/SnowboarindAngel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/images/Steak.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/images/breakFastBurrito.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/images/pbros.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/images/recipes.png" afterDir="false" />
+    <list default="true" id="f353f9be-316d-4add-bd83-7c80b3598ef0" name="Changes" comment="fix main component add resume.component.ts  update app.component.ts add images and resume files">
+      <change afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/nginx.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/content.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/content.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/content.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/content.routes.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/database.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/database.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/recipes.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/recipes.routes.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dist/server.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.angular/cache/17.2.0/client/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/client/.angular/cache/17.2.0/client/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.angular/cache/17.2.0/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.angular/cache/17.2.0/vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/content.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/content.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/main/main.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main/main.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/images/SnowboarindAngel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/images/SnowboarindAngel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/images/pbros.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/images/pbros.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/images/recipes.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/images/recipes.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/content.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/content.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/recipes.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,12 +74,13 @@
     <property name="go.format.on.save.advertiser.fired" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/assets/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Banana\Documents\GitHub\website-2.0\server\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\assets\images" />
       <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -106,7 +117,7 @@
       <workItem from="1708301014662" duration="17000" />
       <workItem from="1708301047104" duration="9231000" />
       <workItem from="1708387230575" duration="908000" />
-      <workItem from="1708388170189" duration="28626000" />
+      <workItem from="1708388170189" duration="64360000" />
     </task>
     <task id="LOCAL-00001" summary="Remove dead code. and add new code for the main page of my website.">
       <created>1708389656277</created>
@@ -122,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708416238495</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix main component add resume.component.ts  update app.component.ts add images and resume files">
+      <created>1708497279638</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708497279638</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +161,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Remove dead code. and add new code for the main page of my website." />
     <MESSAGE value="updated Content interface and db schema for content to better match the content displayed for the webpage." />
-    <option name="LAST_COMMIT_MESSAGE" value="updated Content interface and db schema for content to better match the content displayed for the webpage." />
+    <MESSAGE value="fix main component add resume.component.ts  update app.component.ts add images and resume files" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix main component add resume.component.ts  update app.component.ts add images and resume files" />
   </component>
 </project>

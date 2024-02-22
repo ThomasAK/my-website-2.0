@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
       <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
         <div class="navbar-nav">
           <a [routerLink]="['']" class="nav-item nav-link" type="button">About</a>
-          <a [routerLink]="['/main']" [queryParams]="{name:'Portfolio'}" class="nav-item nav-link" type="button">Portfolio</a>
+          <a [routerLink]="['/main']" [queryParams]="{sectionid:'portfolio'}" class="nav-item nav-link" type="button">Portfolio</a>
           <a [routerLink]="['/resume']" class="nav-item nav-link" type="button">Resume</a>
           <!-- 
           rebuild coming soon. 
@@ -32,6 +32,7 @@ import { Component } from '@angular/core';
     </nav>
     <div class="container-md">
       <router-outlet></router-outlet>
+      <hr/>
     <div id="Contact" class="contactMe">
       <div>
         <h2 class="sub-header"> Contact Me</h2>
