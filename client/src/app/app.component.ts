@@ -7,14 +7,13 @@ import { Component } from '@angular/core';
       <div class="navbar-header">
         <a class="navbar-brand center">Thomas A  Kempton</a>
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" (click)="toggleNavbarCollapsing()">&#9776;
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+      <div class="navbar-collapse justify-content-end" [class.collapse]="navbarCollapsed" >
         <div class="navbar-nav">
-          <a [routerLink]="['']" class="nav-item nav-link" type="button">About</a>
-          <a [routerLink]="['/main']" [queryParams]="{sectionid:'portfolio'}" class="nav-item nav-link" type="button">Portfolio</a>
-          <a [routerLink]="['/resume']" class="nav-item nav-link" type="button">Resume</a>
+          <a [routerLink]="['']" class="nav-item nav-link" type="button" (click)="toggleNavbarCollapsing()">About</a>
+          <a [routerLink]="['/main']" [queryParams]="{sectionid:'portfolio'}" class="nav-item nav-link" type="button" (click)="toggleNavbarCollapsing()">Portfolio</a>
+          <a [routerLink]="['/resume']" class="nav-item nav-link" type="button" (click)="toggleNavbarCollapsing()">Resume</a>
           <!-- 
           rebuild coming soon. 
           <div class="dropdown">
@@ -54,4 +53,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Thomas Kempton';
+  navbarCollapsed = true;
+
+  toggleNavbarCollapsing() {
+    this.navbarCollapsed = !this.navbarCollapsed;
+  }
 }

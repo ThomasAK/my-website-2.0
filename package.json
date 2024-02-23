@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "reset":"docker compose down -v && docker compose build && docker compose up -d",
-    "resetui": "docker compose up --build --force-recreate -d frontend "
+    "reset": "docker compose down -v && docker compose build && docker compose up -d",
+    "resetui": "docker compose up --build --force-recreate -d frontend",
+    "resetServer": "docker compose up --build --force-recreate -d backend"
   },
-  "author": ""
+  "author": "",
+  "dependencies": {
+  }
 }

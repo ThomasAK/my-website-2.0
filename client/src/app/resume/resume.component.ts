@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-resume',
   template: `
-    <div id="Resume" class="section content-toDisplay resume">
-      <div>
-        <embed src="/assets/files/Thomas_Kempton_Resume.pdf" width="100%" height="750rem" />
-      </div>
+    <div class="section resume">
+        <object id="pdf" data="/assets/files/Thomas_Kempton_Resume.pdf" type="application/pdf" width="100%">
+          <p>Your web browser doesn't have a PDF plugin. You can <a href="/assets/files/Thomas_Kempton_Resume.pdf"> Click here</a> to download my resume.</p>
+        </object>
     </div>
   `,
   styles: ``

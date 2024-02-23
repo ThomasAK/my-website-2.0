@@ -3,7 +3,6 @@
 body {
     background-color: rgb(77, 77, 77);
     background-size: 100%;
-
 }
 
 html {
@@ -59,8 +58,9 @@ p {
     overflow: auto;
 }
 
-.Resume.section{
-    background: none;
+.resume{
+    min-height: 500px;
+    overflow: hidden;
 }
 
 .contactMe{
@@ -98,6 +98,30 @@ p {
     padding: 12px;
 }
 
+hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #333;  /* old IE */
+    background-color: #333;  /* Modern Browsers */
+}
+
+#pdf {
+    height: 70vmin;
+}
+
+#icons {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.icon {
+    text-align: center;
+    align-content: center;
+    width: 100px;
+    height: 100px;
+}
+
 @media screen and (max-width: 990px) {
     .header {
         font-size: 2em;
@@ -116,4 +140,17 @@ p {
         padding-right: 1em;
         padding-left: 1em;
     }
+    #pdf {
+        height: 100vmin;
+        background-color: white;
+    }
+
+    #Portfolio {
+        display: inline-block;
+    }
+
+    .Portfolio.content_width {
+        width: 90%;
+    }
+
 }
