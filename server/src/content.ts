@@ -3,6 +3,7 @@ import * as mongodb from "mongodb";
 export interface Content {
     name: string;
     contentBlocks: [{name: string, subHeader:string, text: string, image: {path:string, href:string}}];
+    sectionId: string
     _id?: mongodb.ObjectId;
 }
 
@@ -16,7 +17,7 @@ export const jsonSchema = {
                 bsonType: "string",
                 description: "'name' is required and is a string",
             },
-            sectionid: {
+            sectionId: {
                 bsonType:"string",
                 description: "'sectionid' is required and is a string "
             },

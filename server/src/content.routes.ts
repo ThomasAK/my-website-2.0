@@ -16,7 +16,7 @@ contentRouter.get("/", async (_req, res) => {
 contentRouter.get("/:name", async (req, res) => {
     try {
         const name = req?.params?.name;
-        const content = await collections.content.findOne({ sectionid: name });
+        const content = await collections.content.findOne({ sectionId: name });
 
         if (content) {
             res.status(200).send(content);

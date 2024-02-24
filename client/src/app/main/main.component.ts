@@ -10,15 +10,15 @@ import {Icons} from "../services/icons";
   selector: 'app-main',
   template: `
     <ng-container *ngIf="(content$ |async) as content">
-    <div id="{{content.name}}" class="section">
-      <div  *ngFor="let block of content.contentBlocks" class="{{content.name}}  content_width">
-        <h2 *ngIf="block.subHeader" class="sub-header"> {{block.subHeader}} </h2>
+    <div id="{{content.sectionId}}" class="section">
+      <div  *ngFor="let block of content.contentBlocks" class="{{content.sectionId}}  content_width">
         <div *ngIf="block.image.path" class="img-width"><a href="{{block.image.href}}" target="_blank"> <img class="img-responsive" src="{{block.image.path}}" alt="{{block.subHeader}}">
         </a>
         </div>
+          <h2 *ngIf="block.subHeader" class="sub-header"> {{block.subHeader}} </h2>
         <p *ngIf="block.text">{{block.text}} </p>
           <ng-container *ngIf="(icons$|async) as icons">
-              <br><br>
+              <br>
               <div *ngIf="block.name === 'Skills'" id="icons">
           <div class="icon" *ngFor="let icon of icons.icons">
               <img height="50px" width="50px" src="{{icon.href}}" alt="{{icon.name}}">

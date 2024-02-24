@@ -1,43 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f353f9be-316d-4add-bd83-7c80b3598ef0" name="Changes" comment="Set up docker and nginx. &#10;updated styling.">
-      <change afterPath="$PROJECT_DIR$/client/src/app/services/icon.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/app/services/icons.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/angular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/axios.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/css.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/discord.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/docker.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/express.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/html.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/javascript.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/mongodb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/mysql.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/nginx.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/node-js.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/playwright.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/postman.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/icon.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/icons.ts" afterDir="false" />
+    <list default="true" id="f353f9be-316d-4add-bd83-7c80b3598ef0" name="Changes" comment="Fix navbar collapse&#10;Add icon service to front and back end &#10;Display icon's &#10;Fix resume not showing on Mobile. &#10;rearrange front end files.">
+      <change afterPath="$PROJECT_DIR$/client/src/app/services/spotify.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/icons/postgres.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/certbot/conf/accounts/acme-v02.api.letsencrypt.org/directory/48753222406333eacd8317e18740b010/meta.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/certbot/conf/accounts/acme-v02.api.letsencrypt.org/directory/48753222406333eacd8317e18740b010/private_key.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/certbot/conf/accounts/acme-v02.api.letsencrypt.org/directory/48753222406333eacd8317e18740b010/regr.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/certbot/conf/live/tomkempton.com/fullchain.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/certbot/conf/live/tomkempton.com/privkey.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/certbot/conf/options-ssl-nginx.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/certbot/conf/ssl-dhparams.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/init-letsencrypt.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.angular/cache/17.2.0/client/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/client/.angular/cache/17.2.0/client/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.angular/cache/17.2.0/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.angular/cache/17.2.0/vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/content.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/services/content.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/services/content.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/main/main.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main/main.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/resume/resume.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/resume/resume.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/services/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/services/content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/icons/axios.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/assets/icons/discord.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/content.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/content.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/database.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/recipes.routes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,21 +69,22 @@
     <property name="go.format.on.save.advertiser.fired" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/assets/icons" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Banana\Documents\GitHub\website-2.0\server\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\assets\icons" />
       <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\assets\images" />
       <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\certs" />
       <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\app\services" />
       <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\assets\icons" />
       <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\assets\files" />
       <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\assets" />
-      <recent name="C:\Users\Banana\Documents\GitHub\website-2.0\client\src\app" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -126,7 +114,7 @@
       <workItem from="1708301047104" duration="9231000" />
       <workItem from="1708387230575" duration="908000" />
       <workItem from="1708388170189" duration="68495000" />
-      <workItem from="1708588226760" duration="28097000" />
+      <workItem from="1708588226760" duration="48469000" />
     </task>
     <task id="LOCAL-00001" summary="Remove dead code. and add new code for the main page of my website.">
       <created>1708389656277</created>
@@ -156,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708583725204</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix navbar collapse&#10;Add icon service to front and back end &#10;Display icon's &#10;Fix resume not showing on Mobile. &#10;rearrange front end files.">
+      <created>1708667114606</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708667114606</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +174,7 @@
     <MESSAGE value="updated Content interface and db schema for content to better match the content displayed for the webpage." />
     <MESSAGE value="fix main component add resume.component.ts  update app.component.ts add images and resume files" />
     <MESSAGE value="Set up docker and nginx. &#10;updated styling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up docker and nginx. &#10;updated styling." />
+    <MESSAGE value="Fix navbar collapse&#10;Add icon service to front and back end &#10;Display icon's &#10;Fix resume not showing on Mobile. &#10;rearrange front end files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix navbar collapse&#10;Add icon service to front and back end &#10;Display icon's &#10;Fix resume not showing on Mobile. &#10;rearrange front end files." />
   </component>
 </project>
