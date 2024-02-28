@@ -8,7 +8,8 @@ import {ResumeComponent} from "./resume/resume.component";
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
-  { path: 'resume', component: ResumeComponent}
+  { path: 'resume', component: ResumeComponent},
+  { path: 'recipes', component: ResumeComponent}
 ]
 
 @NgModule({

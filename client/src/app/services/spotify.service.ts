@@ -1,33 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {lastValueFrom, Observable, of, switchMap} from 'rxjs';
+import {Data as data} from "../../data";
+import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
 
 @Injectable({
     providedIn: 'root'
 })
-export class spotifyService {
-    tokenTime: Date;
-    private token: string;
-    oneHour: number;
-    constructor(private httpClient: HttpClient) { this.oneHour = 60 * 60 * 1000; }
+export class SpotifyService {
+    constructor(private httpClient: HttpClient) {}
 
-    getAccessToken(): Observable<{token_type: string, access_token: string, expires_in: string}> {
+
+    async getAccessToken(): Promise<string>{
+        let result: any;
         const headers = new HttpHeaders()
-            .set("Content-type", "application/x-www-form-urlencoded")
-        return this.httpClient.post("https://accounts.spotify.com/api/token", "grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret", {headers})
+            .set("Content-type", "application/x-www-form-urlencoded");
+        result = await lastValueFrom( this.httpClient.post("https://accounts.spotify.com/api/token", `grant_type=client_credentials&client_id=${data.clientId}&client_secret=${data.clientSecret}`, {headers}))
+        const token = result.access_token
+        return token
     }
 
-    getCurrentlyPlaying(): Observable<{}> {
-        if ((new Date()) - this.tokenTime > this.oneHour) {
-            this.getAccessToken().subscribe(res => {
-                this.token = `${res.token_type} ${res.access_token}`
-                this.tokenTime = new Date()
-            })
-        }
 
-
+    async getMyPlaylists(): Promise<Observable<any>>{
+        const token = await this.getAccessToken().then()
+        console.log(token)
         const headers = new HttpHeaders()
-            .set("Authorization", this.token);
-        return this.httpClient.get(`https://api.spotify.com/v1/me/player/currently-playing`, {headers});
+            .set("Authorization", `Bearer ${token}`);
+        return this.httpClient.get<any>(`https://api.spotify.com/v1/users/thomas.a.k.tk/playlists`, {headers});
+
     }
+
 }

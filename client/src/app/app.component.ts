@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -39,8 +39,8 @@ import { Component } from '@angular/core';
       <div>
         <p> Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, or random questions about the universe and the meaning of life. Feel free to drop me a line anytime.
           I promise to reply A.S.A.P. <br><br>
-          <a href="https://www.facebook.com/thomas.kem" target="_blank" class="btn btn-primary" role="button">FaceBook</a>
-          <a href="https://www.freecodecamp.com/thomasak" target="_blank" class="btn btn-success" role="button">FreeCodeCamp</a>
+          <a href="https://www.facebook.com/thomas.kem" target="_blank" class="btn btn-light" role="button">FaceBook</a>
+          <a href="https://www.linkedin.com/in/thomas-a-kempton/" target="_blank" class="btn btn-light" role="button">LinkedIn</a>
           <a href="https://github.com/ThomasAK" target="_blank" class="btn btn-light" role="button">GitHub</a>
           <br> <br><strong> Email - Thomas.a.k.tk&#64;gmail.com </strong>
           <br> Website built using the MEAN stack Check out the code on GitHub
@@ -51,7 +51,7 @@ import { Component } from '@angular/core';
   `,
   styles: []
 })
-export class AppComponent {
+export class AppComponent{
   title = 'Thomas Kempton';
   navbarCollapsed = true;
 

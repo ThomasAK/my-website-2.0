@@ -7,12 +7,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MainComponent } from './main/main.component';
 import { ResumeComponent } from './resume/resume.component';
+import { SafePipe } from './safe.pipe';
+import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    ResumeComponent
+    ResumeComponent,
+    SafePipe,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
