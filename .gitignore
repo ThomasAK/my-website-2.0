@@ -1,6 +1,0 @@
-/server/.env
-/client/node_modules/
-/client/.vscode/
-/server/node_modules/
-/data/
-/client/src/data.ts
