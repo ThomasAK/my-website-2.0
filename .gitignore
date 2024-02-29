@@ -1,0 +1,7 @@
+/server/.env
+/client/src/data.ts
+/client/node_modules/
+/client/.vscode/
+/server/node_modules/
+/data/
+/init-letsencrypt.sh

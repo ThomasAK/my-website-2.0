@@ -12,39 +12,42 @@ import {DadJokeService} from "../services/dadJoke.service";
   selector: 'app-main',
   template: `
     <ng-container *ngIf="(content$ |async) as content">
-    <div id="{{content.sectionId}}" class="section">
-      <div  *ngFor="let block of content.contentBlocks" class="{{content.sectionId}}  content_width">
-        <div *ngIf="block.image.path" class="img-width"><a href="{{block.image.href}}" target="_blank"> <img class="img-responsive" src="{{block.image.path}}" alt="{{block.subHeader}}">
-        </a>
-        </div>
-          <h2 *ngIf="block.subHeader" class="sub-header"> {{block.subHeader}} </h2>
-        <p *ngIf="block.text">{{block.text}} </p>
-          <ng-container *ngIf="(icons$|async) as icons">
-              <br>
-              <div *ngIf="block.name === 'Skills'" id="icons">
-          <div class="icon" *ngFor="let icon of icons.icons">
-              <img height="50px" width="50px" src="{{icon.href}}" alt="{{icon.name}}">
-              <p> {{icon.name}} </p>
-          </div>
+    <div id="{{content.sectionId}}" class="space-y-8 pt-8 px-12">
+      <div  *ngFor="let block of content.contentBlocks">
+          <div *ngIf="block.name !== 'Skills'" class="hero ">
+              <div class="hero-content flex-col lg:flex-row " *ngIf="block.image.path"><a href="{{block.image.href}}" target="_blank"> 
+                  <img class="max-w-sm rounded-lg shadow-xl shadow-indigo-500/50" src="{{block.image.path}}" alt="{{block.subHeader}}"> </a>
+                  <div>
+                    <h2 *ngIf="block.subHeader" class="sub-header"> {{block.subHeader}} </h2>
+                    <p *ngIf="block.text">{{block.text}} </p>
+                  </div>
               </div>
-          </ng-container>
+          </div>
       </div>
     </div>
     </ng-container>
-    <ng-container *ngIf="!name">
-        <hr/>
-        <div  class="content_width">
-            <p>Random playlist from My personal playlists. Provided using Spotify Web API.</p>
-            <div *ngIf="randPlaylist">
+    <div *ngIf="!name" class="space-y-8 px-12">
+        <ng-container *ngIf="(icons$ | async) as icons">
+            <div class="flex flex-wrap justify-center" >
+                <div  *ngFor="let icon of icons.icons" class="rounded-lg shadow-xl flex flex-col items-center p-5 lg:p-2">
+                    <img height="70px" width="70px" src="{{icon.href}}" alt="{{icon.name}}">
+                    <p> {{icon.name}} </p>
+                </div>
+            </div>
+        </ng-container>
+        <div class="divider"></div>
+        <div  class="flex flex-col space-y-4 items-center">
+            <div><p>Random playlist from My personal playlists. Provided using Spotify Web API.</p></div>
+            <div *ngIf="randPlaylist" class="media shadow-lg shadow-cyan-500/50" style="min-height: 100px">
                 <iframe style="border-radius:12px" [src]="randPlaylist | safe"  width="100%" height="410" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
-            <div *ngIf="(dadJoke$ | async) as dadJoke" style="text-align: center;">
+            <div *ngIf="(dadJoke$ | async) as dadJoke">
                 <p> {{dadJoke.joke}} <br> Joke provided by <a href="https://icanhazdadjoke.com/api" target="_blank">https://icanhazdadjoke.com/api</a></p>
-                <button (click)="getRandDadJoke(); getRandPlaylist();" class="btn btn-light" >Refresh</button>
+                <button (click)="getRandDadJoke(); getRandPlaylist();" class="btn btn-outline btn-sm btn-info mt-2" >Refresh</button>
                 <p>Will load new random joke and playlist</p>
             </div>
         </div>
-    </ng-container>
+    </div>
  `,
   styles: ``
 })
@@ -52,7 +55,6 @@ export class MainComponent implements OnInit{
   name: string = "";
   content$: Observable<Content>;
   icons$: Observable<Icons>;
-  playlists$: Observable<any>;
   randPlaylist: string;
   dadJoke$: Observable<any>;
 
