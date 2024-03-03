@@ -12,6 +12,7 @@ export const jsonSchema = {
             required: ["name"],
             additionalProperties: false,
             properties: {
+                id: {},
                 name: {
                     bsonType: "string",
                     description: "'name' is required and is a string",

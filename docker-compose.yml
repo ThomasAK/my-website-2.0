@@ -16,23 +16,27 @@ services:
       - 5200:5200
     networks:
       - website_net
-  proxy:
+  nginx:
     image: nginx:stable-alpine
     environment:
-      - NGINX_ENVSUBST_TEMPLATE_SUFFIX=.conf
+      - NGINX_ENVSUBST_TEMPLATE_SUFFIX=.connpf
       - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
     volumes:
-      - ${PWD}/nginx.conf:/etc/nginx/templates/nginx.conf.conf
+      - ./data/nginx:/etc/nginx/conf.d
+      - ./data/certbot/conf:/etc/letsencrypt:rw
+      - ./data/certbot/www:/var/www/certbot:rw
     ports:
-      - "80:80"
+      - 80:80
+      - 443:443
     networks:
       - website_net
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
   certbot:
     image: certbot/certbot
-    volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certboty\
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt:rw
+      - ./data/certbot/www:/var/www/certbot:rw
     networks:
       - website_net
 

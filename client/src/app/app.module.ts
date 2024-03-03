@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { ResumeComponent } from './resume/resume.component';
 import { SafePipe } from './safe.pipe';
 import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeComponent } from './recipe/recipe.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RecipesComponent } from './recipes/recipes.component';
     MainComponent,
     ResumeComponent,
     SafePipe,
-    RecipesComponent
+    RecipesComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,

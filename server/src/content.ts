@@ -13,6 +13,7 @@ export const jsonSchema = {
         required: ["sectionid", "contentBlocks"],
         additionalProperties: false,
         properties: {
+            _id: {},
             name: {
                 bsonType: "string",
                 description: "'name' is required and is a string",

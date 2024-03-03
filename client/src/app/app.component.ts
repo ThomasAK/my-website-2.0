@@ -13,6 +13,7 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
             <li><a [routerLink]="['']" (click)="changeFocus()">About</a></li>
             <li><a [routerLink]="['/main']" [queryParams]="{sectionid:'portfolio'}" (click)="changeFocus()">Portfolio</a></li>
             <li><a [routerLink]="['/resume']" (click)="changeFocus()">Resume</a></li>
+            <li><a [routerLink]="['/recipes']" (click)="changeFocus()">Recipes</a></li>
           </ul>
         </div>
       </div>
@@ -24,6 +25,7 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
           <li><a [routerLink]="['']" >About</a></li>
           <li><a [routerLink]="['/main']" [queryParams]="{sectionid:'portfolio'}">Portfolio</a></li>
           <li><a [routerLink]="['/resume']" >Resume</a></li>
+          <li><a [routerLink]="['/recipes']" (click)="changeFocus()">Recipes</a></li>
         </ul>
       </div>
       
