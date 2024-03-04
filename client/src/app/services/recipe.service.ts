@@ -23,7 +23,7 @@ export class RecipeService {
         return this.recipes$;
     }
 
-    getRecipe(id: string): Observable<Recipe> {
+    getRecipe(id: string | null): Observable<Recipe> {
         return this.httpClient.get<Recipe>(`/api/recipe/${id}`);
     }
 

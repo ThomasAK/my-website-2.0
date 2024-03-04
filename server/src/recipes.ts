@@ -5,6 +5,7 @@ export interface Recipe {
     ingredients: [{name: string, amount: string, measurement: string}];
     instructions: [string];
     description: string;
+    meal: string;
     path: string;
     locked: boolean;
     _id?: mongodb.ObjectId;
@@ -61,6 +62,10 @@ export const jsonSchema = {
             path:{
                 bsonType: "string",
                 description: "'path' is not a required field and is a string"
+            },
+            meal:{
+                bsonType: "string",
+                description: "'meal' is not required and is a string"
             },
             _id:{}
         },

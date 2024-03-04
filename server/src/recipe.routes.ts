@@ -17,7 +17,7 @@ recipeRouter.get("/", async (_req, res) => {
 recipeRouter.get("/:id", async (req, res) => {
     try {
         const id = req?.params?.id;
-        const query = { id: new mongodb.ObjectId(id) };
+        const query = { _id: new mongodb.ObjectId(id) };
         const recipe = await collections.recipes.findOne(query);
 
         if (recipe) {
@@ -50,7 +50,7 @@ recipeRouter.post("/" , async (req ,res ) => {
 recipeRouter.put("/:id", async (req ,res ) => {
     try {
         const id = req?.params?.id;
-        const query = {id: new mongodb.ObjectId(id)};
+        const query = { _id: new mongodb.ObjectId(id)};
         if (!(await collections.recipes.findOne(query)).locked ) {
             const recipe = req.body;
             const result = await collections.recipes.updateOne(query, {$set: recipe})
@@ -73,7 +73,7 @@ recipeRouter.put("/:id", async (req ,res ) => {
 recipeRouter.delete("/:id", async (req, res ) => {
     try {
         const id = req?.params?.id;
-        const query = {id: new mongodb.ObjectId(id)};
+        const query = { _id: new mongodb.ObjectId(id)};
         if (!(await collections.recipes.findOne(query)).locked ) {
             const result = await collections.recipes.deleteOne(query)
 

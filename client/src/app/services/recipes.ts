@@ -6,6 +6,7 @@ export interface Recipe {
     instructions: [string];
     path: string
     description: string;
+    meal: string;
     locked: boolean;
     _id?: string;
 }

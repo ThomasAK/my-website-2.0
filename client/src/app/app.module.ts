@@ -10,6 +10,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { SafePipe } from './safe.pipe';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeComponent } from './recipe/recipe.component';
+import { RecipeFormComponent } from './recipe-form/recipe-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RecipeComponent } from './recipe/recipe.component';
     ResumeComponent,
     SafePipe,
     RecipesComponent,
-    RecipeComponent
+    RecipeComponent,
+    RecipeFormComponent
   ],
   imports: [
     BrowserModule,

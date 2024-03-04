@@ -30,6 +30,9 @@ module.exports = {
 
           "error": "#7f1d1d",
         },
+        boxShadow: {
+          "ct": "-2px 10px 15px -3px rgb(0 0 0 / 0.1)"
+        }
       },
     ],
   },
