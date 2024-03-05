@@ -74,7 +74,7 @@ export class RecipeComponent implements OnInit{
               alert("Recipe DELETED!")
             },
             error: (error) => {
-              alert("Failed to update employee");
+              alert("Failed to delete recipe");
               console.error(error);
             }
           });

@@ -158,7 +158,7 @@ export class RecipeFormComponent {
             this.router.navigate(['/recipe/',value]);
           },
           error: (error) => {
-            alert("Failed to update employee");
+            alert("Failed to create recipe");
             console.error(error);
           }
         });
@@ -178,7 +178,6 @@ export class RecipeFormComponent {
   }
 
   addOrUpdateRecipe(){
-    if (new Date(sessionStorage.getItem('time')!.toString()).getMilliseconds() < new Date().getMilliseconds() - 30000) return alert("You can only add or update every 30 seconds.")
     if (this.id){
       this.updateRecipe()
     }else {
