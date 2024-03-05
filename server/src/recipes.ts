@@ -2,7 +2,7 @@ import * as mongodb from "mongodb";
 
 export interface Recipe {
     name: string;
-    ingredients: [{name: string, amount: string, measurement: string}];
+    ingredients: [{name: string, measurement: string}];
     instructions: [string];
     description: string;
     meal: string;
@@ -32,10 +32,6 @@ export const jsonSchema = {
                         name: {
                             bsonType: "string",
                             description: "'name' is required and is a string",
-                        },
-                        amount: {
-                            bsonType: "string",
-                            description: "'amount' is required and is a string",
                         },
                         measurement: {
                             bsonType:"string",

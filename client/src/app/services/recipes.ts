@@ -2,11 +2,11 @@
 
 export interface Recipe {
     name: string;
-    ingredients: [{name: string, amount: string, measurement: string}];
+    ingredients: [{name: string, measurement: string}];
     instructions: [string];
-    path: string
     description: string;
     meal: string;
+    path: string
     locked: boolean;
     _id?: string;
 }

@@ -11,11 +11,12 @@ import {DadJokeService} from "../services/dadJoke.service";
 @Component({
   selector: 'app-main',
   template: `
+      
     <ng-container *ngIf="(content$ |async) as content">
-    <div id="{{content.sectionId}}" class="space-y-8 pt-8 px-12">
+    <div id="{{content.sectionId}}" class=" flex flex-col items-center space-y-8 pt-8 px-12">
       <div  *ngFor="let block of content.contentBlocks">
           <div *ngIf="block.name !== 'Skills'" class="hero ">
-              <div class="hero-content flex-col lg:flex-row " *ngIf="block.image.path"><a href="{{block.image.href}}" target="_blank"> 
+              <div class="hero-content flex-col lg:flex-row" *ngIf="block.image.path"><a href="{{block.image.href}}" target="_blank"> 
                   <img class="max-w-sm rounded-lg shadow-xl shadow-indigo-500/50" src="{{block.image.path}}" alt="{{block.subHeader}}"> </a>
                   <div>
                     <h2 *ngIf="block.subHeader" class="sub-header"> {{block.subHeader}} </h2>
@@ -36,7 +37,7 @@ import {DadJokeService} from "../services/dadJoke.service";
             </div>
         </ng-container>
         <div class="divider"></div>
-        <div  class="flex flex-col space-y-4 items-center">
+        <div  class="flex flex-col space-y-4 items-center text-center">
             <div><p>Random playlist from My personal playlists. Provided using Spotify Web API.</p></div>
             <div *ngIf="randPlaylist" class="media shadow-lg shadow-cyan-500/50" style="min-height: 100px">
                 <iframe style="border-radius:12px" [src]="randPlaylist | safe"  width="100%" height="410" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>

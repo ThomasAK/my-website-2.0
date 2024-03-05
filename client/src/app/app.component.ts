@@ -30,7 +30,6 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
       </div>
       
     </div>
-    <div class="flex flex-col items-center text-center">
       <router-outlet></router-outlet>
       <footer class="footer footer-center mt-10 pb-2 bg-primary text-primary-content">
         <aside>
@@ -50,9 +49,10 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
             <a class="link-secondary" href="mailto:thomas.a.k.tk@gmail.com">Email</a>
           </div>
         </nav>
-        <p>Website built using the MEAN stack Check out the code on GitHub</p>
+        <div>
+            <p>Website built using the MEAN stack Check out the code <a class="link-secondary" href="https://github.com/ThomasAK/my-website-2.0" target="_blank" >Here</a></p>
+        </div>
       </footer>
-    </div>
   `,
   styles: []
 })

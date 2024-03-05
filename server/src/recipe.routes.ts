@@ -37,7 +37,7 @@ recipeRouter.post("/" , async (req ,res ) => {
         const result = await collections.recipes.insertOne(recipe);
 
         if (result.acknowledged){
-            res.status(201).send(`Created new recipe ${recipe.name}`)
+            res.status(201).send(recipe._id.toNumber())
         } else {
             res.status(500).send("Failed to create new recipe")
         }

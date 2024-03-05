@@ -11,6 +11,7 @@ import { SafePipe } from './safe.pipe';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { RecipeFormComponent } from './recipe-form/recipe-form.component';
+import { RecipeNavComponent } from './recipe-nav/recipe-nav.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RecipeFormComponent } from './recipe-form/recipe-form.component';
     SafePipe,
     RecipesComponent,
     RecipeComponent,
-    RecipeFormComponent
+    RecipeFormComponent,
+    RecipeNavComponent
   ],
   imports: [
     BrowserModule,
