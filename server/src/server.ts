@@ -5,6 +5,7 @@ import { connectToDatabase } from "./database";
 import { contentRouter } from "./content.routes";
 import { iconRouter } from "./icon.routes";
 import { recipeRouter } from "./recipe.routes";
+import {authRouter} from "./auth.routes";
 
 // Load environment variables from the .env file, where the ATLAS_URI is configured
 dotenv.config();
@@ -23,6 +24,7 @@ connectToDatabase(ATLAS_URI)
         app.use("/api/content", contentRouter);
         app.use("/api/icons", iconRouter);
         app.use("/api/recipe", recipeRouter);
+        app.use("/api/auth", authRouter)
 
         // start the Express server
         app.listen(5200, () => {

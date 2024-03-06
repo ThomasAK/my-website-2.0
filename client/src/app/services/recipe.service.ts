@@ -31,11 +31,11 @@ export class RecipeService {
         return this.httpClient.post('/api/recipe', recipe, { responseType: 'text' })
     }
 
-    updateRecipe(id: string, recipe: Recipe): Observable<string> {
-        return this.httpClient.put(`/recipe/${id}`, recipe, { responseType: 'text' });
+    updateRecipe(id: string | null, recipe: Recipe): Observable<string> {
+        return this.httpClient.put(`/api/recipe/${id}`, recipe, { responseType: 'text' });
     }
 
-    deleteRecipe(id: string): Observable<string> {
-        return this.httpClient.delete(`/recipe/${id}`, { responseType: 'text' });
+    deleteRecipe(id: string | null): Observable<string> {
+        return this.httpClient.delete(`/api/recipe/${id}`, { responseType: 'text' });
     }
 }

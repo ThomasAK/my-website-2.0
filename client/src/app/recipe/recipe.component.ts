@@ -18,7 +18,6 @@ import { Recipe } from "../services/recipes";
                 <h2 class="sub-header font-bold text-xl"> {{recipe.name}} </h2>
                 <p *ngIf="recipe.description">{{recipe.description}} </p>
                 <button [routerLink]="['/recipe/edit/', recipe._id]" class="btn btn-primary mr-2">Edit</button>
-                <button *ngIf="!recipe.locked" (click)="deleteRecipe()" class="btn btn-primary">Delete</button>
               </div>
             </div>
           </div>

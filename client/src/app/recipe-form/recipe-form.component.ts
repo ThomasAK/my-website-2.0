@@ -1,9 +1,10 @@
-import {AfterContentInit, AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
-import {ActivatedRoute, Router} from "@angular/router";
-import {Recipe} from "../services/recipes";
-import {lastValueFrom, Observable} from "rxjs";
-import {RecipeService} from "../services/recipe.service";
+import { Component } from '@angular/core';
+import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from "@angular/router";
+import { Recipe } from "../services/recipes";
+import { lastValueFrom } from "rxjs";
+import { RecipeService } from "../services/recipe.service";
+import { AuthService } from "../services/auth.service";
 
 @Component({
   selector: 'app-recipe-form',
@@ -66,8 +67,12 @@ import {RecipeService} from "../services/recipe.service";
             <label class="input input-bordered flex items-center bg-sky-100 text-black gap-2 mx-2">
               Image URL
               <input formControlName="path" type="text" class="grow border-b-2 border-slate-400 " placeholder="http://imageURL.com/image" />
-            </label> 
-            <button *ngIf="!recipe.locked" class="btn btn-outline" (click)="addOrUpdateRecipe()" > Submit </button>
+            </label>
+            <label class="input input-bordered flex items-center bg-sky-100 text-black gap-2 mx-2">
+              Passcode
+              <input formControlName="token" type="password" class="grow border-b-2 border-slate-400 "  />
+            </label>
+            <button class="btn btn-outline" (click)="addOrUpdateRecipe()" > Submit </button>
           </div>
         </div>
       </form>
@@ -92,18 +97,13 @@ export class RecipeFormComponent {
 
   id: string | null;
 
-  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private recipeService: RecipeService, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private recipeService: RecipeService, private router: Router, private authService: AuthService) {
     this.id = this.route.snapshot.paramMap.get('id');
-    if (!sessionStorage.getItem('time')) {
-      sessionStorage.setItem('time', new Date(2018, 11, 24, 10, 33, 30, 0).toString());
-    }
-    console.log(this.id)
   }
 
   async ngOnInit() {
     if (this.id) {
       this.recipe = await lastValueFrom(this.recipeService.getRecipe(this.id))
-      if (this.recipe.locked) alert("This recipe can't be changed! But feel free to play with this page.")
     }
     this.recipeForm = this.formBuilder.group({
       recipe: [this.recipe.name],
@@ -115,9 +115,9 @@ export class RecipeFormComponent {
       )),
       description: [this.recipe.description],
       meal: [this.recipe.meal],
-      path: [this.recipe.path]
+      path: [this.recipe.path],
+      token: ""
     });
-    console.log(this.recipeForm)
   }
 
   get ingredients(): FormArray {
@@ -130,7 +130,6 @@ export class RecipeFormComponent {
 
   addForm(form: FormArray, index: number, type: any) {
     form.insert(index + 1, this.formBuilder.group(type));
-    console.log(this.instructions.value.map((instruction: any) => {return instruction.text}))
   }
 
   removeForm(form: FormArray, index: number) {
@@ -151,11 +150,10 @@ export class RecipeFormComponent {
   }
 
   createRecipe(){
-    if (this.recipe.locked) return
     this.recipeService.createRecipe(this.getRecipeFromForm())
         .subscribe( {
           next: (value) => {
-            this.router.navigate(['/recipe/',value]);
+            this.router.navigate(['/recipe/',value.slice(1, value.length - 1)]);
           },
           error: (error) => {
             alert("Failed to create recipe");
@@ -165,7 +163,6 @@ export class RecipeFormComponent {
   }
 
   updateRecipe(){
-    if (this.recipe.locked) return
     this.recipeService.updateRecipe(this.id, this.getRecipeFromForm()).subscribe( {
       next: () => {
         this.router.navigate(['/recipe/',this.id]);
@@ -178,11 +175,20 @@ export class RecipeFormComponent {
   }
 
   addOrUpdateRecipe(){
-    if (this.id){
-      this.updateRecipe()
-    }else {
-      this.createRecipe()
-    }
+    const token = this.recipeForm.get('token')?.value
+    this.authService.getToken(token).subscribe({
+      next: () => {
+        if (this.id){
+          this.updateRecipe()
+        }else {
+          this.createRecipe()
+        }
+      },
+      error: (error) => {
+        alert("Incorrect password. If you would like the password please contact me. In the future I will set up gmail auth but for now this temp auth will be in place.")
+        console.error(error)
+      }
+    })
   }
 
 }

@@ -37,7 +37,7 @@ recipeRouter.post("/" , async (req ,res ) => {
         const result = await collections.recipes.insertOne(recipe);
 
         if (result.acknowledged){
-            res.status(201).send(recipe._id.toNumber())
+            res.status(201).send(recipe._id)
         } else {
             res.status(500).send("Failed to create new recipe")
         }
@@ -51,18 +51,14 @@ recipeRouter.put("/:id", async (req ,res ) => {
     try {
         const id = req?.params?.id;
         const query = { _id: new mongodb.ObjectId(id)};
-        if (!(await collections.recipes.findOne(query)).locked ) {
-            const recipe = req.body;
-            const result = await collections.recipes.updateOne(query, {$set: recipe})
-            if (result && result.matchedCount) {
-                res.status(200).send(`Updated recipe ${recipe.name}`);
-            } else if (!result.matchedCount) {
-                res.status(404).send(`Failed to find recipe ${recipe.name}`);
-            } else {
-                res.status(304).send(`Failed to update recipe ${recipe.name}`);
-            }
+        const recipe = req.body;
+        const result = await collections.recipes.updateOne(query, {$set: recipe})
+        if (result && result.matchedCount) {
+            res.status(200).send(`Updated recipe ${recipe.name}`);
+        } else if (!result.matchedCount) {
+            res.status(404).send(`Failed to find recipe ${recipe.name}`);
         } else {
-            res.status(423).send('This recipe is locked and can not be edited')
+            res.status(304).send(`Failed to update recipe ${recipe.name}`);
         }
     } catch (err){
         console.error(err);
