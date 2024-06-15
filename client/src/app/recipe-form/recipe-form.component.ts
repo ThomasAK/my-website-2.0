@@ -72,7 +72,10 @@ import { AuthService } from "../services/auth.service";
               Passcode
               <input formControlName="token" type="password" class="grow border-b-2 border-slate-400 "  />
             </label>
-            <button class="btn btn-outline" (click)="addOrUpdateRecipe()" > Submit </button>
+            <div class="flex justify-center space-x-1">
+              <button class="btn btn-outline" (click)="addOrUpdateRecipe()" > Submit </button>
+              <button *ngIf="id" class="btn btn-outline" (click)="deleteRecipe()" > Delete </button>
+            </div>
           </div>
         </div>
       </form>
@@ -191,4 +194,19 @@ export class RecipeFormComponent {
     })
   }
 
+  deleteRecipe(){
+    if(confirm("Are ABSOLUTELY POSITIVE you want to DELETE this recipe?????")){
+      this.recipeService.deleteRecipe(this.id)
+          .subscribe( {
+            next: () => {
+              this.router.navigate(['/recipes']);
+              alert("Recipe DELETED!")
+            },
+            error: (error) => {
+              alert("Failed to delete recipe");
+              console.error(error);
+            }
+          });
+    }
+  }
 }
