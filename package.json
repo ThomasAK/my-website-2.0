@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "reset": "docker compose down -v && docker compose build && docker compose up -d",
-    "resetui": "docker compose up --build --force-recreate -d frontend",
+    "resetui": "docker-compose up --build --force-recreate -d frontend",
     "resetserver": "docker compose up --build --force-recreate -d backend",
     "resetproxy": "docker compose up --build --force-recreate -d nginx"
   },

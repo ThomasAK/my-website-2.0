@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {lastValueFrom, Observable, of, switchMap} from 'rxjs';
-import {Data as data} from "../../data";
-import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
+import { Data as data } from '../../data';
+
 
 @Injectable({
     providedIn: 'root'
